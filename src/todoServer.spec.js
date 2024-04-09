@@ -1,4 +1,4 @@
-const { getTodos } = require('./todoServer')
+const { getTodos } = require('./mockServer')
 
 const mockResponse = {
     json: jest.fn(),
