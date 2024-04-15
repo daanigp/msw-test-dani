@@ -1,5 +1,6 @@
 const axios = require('axios').default
 const faker = require('faker')
+const idProject = faker.datatype.number({min: 0, max: 10000})
 
 module.exports = {
     getTodos: async (req, res) => {
@@ -20,7 +21,6 @@ module.exports = {
             const nombreFalso = faker.name.findName();
 
             const PMA1 = {
-                //"id": generarNumeroAleatorio(100000000),
                 "id": faker.datatype.number({min: 0, max: 1000000}),
                 "key": "PMA1-" + url,
                 "name": nombreFalso,
@@ -55,8 +55,8 @@ module.exports = {
         //Crear un json con fker, y devolverlo.
         try {
             const url = req.params.nombre;
-            const resultadosMax = faker.datatype.number({min: 0, max: 100});
-            const resultadosTotal = faker.datatype.number({ max: resultadosMax });
+            const resultadosMax = 30;
+            const resultadosTotal = 21;
 
             const PMA1 = {
                 "next": null,
@@ -78,8 +78,8 @@ module.exports = {
         //Crear un json con fker, y devolverlo.
         try {
             const url = req.params.nombre;
-            const resultadosMax = faker.datatype.number({min: 0, max: 100});
-            const resultadosTotal = faker.datatype.number({ max: resultadosMax });
+            const resultadosMax = 30;
+            const resultadosTotal = 21;
 
             const statusPMA1 = {
                 "next": null,
@@ -98,27 +98,7 @@ module.exports = {
     }
 }
 
-function generarNumeroAleatorio(num) {
-    const numero = Math.floor(Math.random() * (num - 1) + 1);
-
-    return numero;    
-}
-
 function generarFechaAleatoria() {
-    /*const fechaInicio = new Date(2022, 0, 1);
-    const fechaFin = new Date(2024, 3, 31);
-    
-    const tiempoAleatorio = fechaInicio.getTime() + Math.random() * (fechaFin.getTime() - fechaInicio.getTime());
-    
-    const fechaAleatoria = new Date(tiempoAleatorio);
-    
-    const horas = Math.floor(Math.random() * 24);
-    const minutos = Math.floor(Math.random() * 60);
-    const segundos = Math.floor(Math.random() * 60); 
-    const milisegundos = Math.floor(Math.random() * 1000);
-    
-    fechaAleatoria.setHours(horas, minutos, segundos, milisegundos);*/
-
     const fechaInicio = new Date();
     fechaInicio.setMonth(fechaInicio.getMonth() - 3);
 
@@ -132,24 +112,30 @@ function generarFechaAleatoria() {
 function generarPMA1(url, numVeces) {
     const objetosPMA1 = [];
     const fecha = generarFechaAleatoria();
+   
+    
+    const idTestCase = faker.datatype.number({ min: 0, max: 100000 });
 
     for (let i = 1; i <= numVeces; i++) {
+        const idTestCycle = faker.datatype.number({ min: 0, max: 100000 });
+        const idStatus = faker.datatype.number({ min: 0, max: 21 });
+
         const pma = {
             "id": i,
             "key":"PMA1-" + url + "-E" + faker.datatype.number({min: 0, max: 1000}),
             "project": {
-                "id":faker.datatype.number({min: 0, max: 100000}),
-                "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+                "id": idProject,
+                "self":"https://api.zephyrscale.smartbear.com/v2/projects/" + idProject
             },
             "testCase": {
-                "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
-                "id":faker.datatype.number({min: 0, max: 100000})
+                "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-" + url +"/versions/1",
+                "id": idTestCase
             },
             "environment":null,
             "jiraProjectVersion":null,
             "testExecutionStatus": {
-                "id":faker.datatype.number({min: 0, max: 100000}),
-                "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381896"
+                "id": idStatus, 
+                "self":"https://api.zephyrscale.smartbear.com/v2/statuses/" + idStatus
             },
             "actualEndDate":fecha,
             "estimatedTime":null,
@@ -159,8 +145,8 @@ function generarPMA1(url, numVeces) {
             "comment":null,
             "automated":true,
             "testCycle": {
-                "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17179767",
-                "id":faker.datatype.number({min: 0, max: 100000})
+                "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/" + idTestCycle,
+                "id": idTestCycle
             },
             "customFields": {
                 "Source of the problem":null,
@@ -180,7 +166,7 @@ function generarPMA1(url, numVeces) {
 
 function generarPMA1status(url, numVeces) {
     const objetosPMA1status = []
-    const idProject = faker.datatype.number({min: 0, max: 10000})
+    
 
     for (let i = 1; i <= numVeces; i++) {
 
@@ -190,9 +176,9 @@ function generarPMA1status(url, numVeces) {
             "id": i,
             "project": {
                 "id": idProject,
-                "self": "https://api.zephyrscale.smartbear.com/v2/projects/129674"
+                "self": "https://api.zephyrscale.smartbear.com/v2/projects/" + idProject
             },
-            "name": "PMA1-" + url + "S-" + nombreStatus,
+            "name": nombreStatus,
             "description": null,
             "index": i-1,
             "color": generarColorStatus(nombreStatus),
@@ -208,27 +194,17 @@ function generarPMA1status(url, numVeces) {
 }
 
 function generarNombreObjetoStatus() {
-    const num = generarNumeroAleatorio(10)
+    const num = faker.datatype.number({min: 1, max: 4})
 
     switch (num) {
         case 1:
             return "Not Executed"
         case 2:
-            return "In Progress"
-        case 3:
             return "Pass"
-        case 4:
+        case 3:
             return "Fail"
-        case 5:
+        case 4:
             return "Blocked"
-        case 6:
-            return "Done"
-        case 7: 
-            return "Draft"
-        case 8:
-            return "Deprecated"
-        case 9:
-            return "Approved"
     }
 }
 
@@ -236,22 +212,12 @@ function generarColorStatus(nombre) {
     switch (nombre) {
         case "Not Executed":
             return "#cfcfc4"
-        case "In Progress":
-            return "#f0ad4e"
         case "Pass":
             return "#3abb4b"
         case "Fail":
             return "#df2f36"
         case "Blocked":
             return "#4b88e7"
-        case "Done":
-            return "#3abb4b"
-        case "Draft":
-            return "#f0ad4e"
-        case "Deprecated":
-            return "#4b88e7"
-        case "Approved":
-            return "#3abb4b"
     }
 }
 
@@ -259,21 +225,11 @@ function paramArchived(nombre) {
     switch (nombre) {
         case "Not Executed":
             return false
-        case "In Progress":
-            return false
         case "Pass":
             return false
         case "Fail":
             return false
         case "Blocked":
-            return false
-        case "Done":
-            return false
-        case "Draft":
-            return false
-        case "Deprecated":
-            return false
-        case "Approved":
             return false
     }
 }
@@ -282,21 +238,11 @@ function paramDefault(nombre) {
     switch (nombre) {
         case "Not Executed":
             return true
-        case "In Progress":
-            return false
         case "Pass":
             return false
         case "Fail":
             return false
         case "Blocked":
-            return false
-        case "Done":
-            return false
-        case "Draft":
-            return true
-        case "Deprecated":
-            return false
-        case "Approved":
             return false
     }
 }
