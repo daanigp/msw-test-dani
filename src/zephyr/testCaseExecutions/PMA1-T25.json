@@ -1,0 +1,488 @@
+{
+    "next":null,
+    "startAt":0,
+    "maxResults":50,
+    "total":13,
+    "isLast":true,
+    "values": [{
+        "id":698777302,
+        "key":"PMA1-E188547",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381896,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381896"
+        },
+        "actualEndDate":"2024-01-26T10:25:31Z",
+        "estimatedTime":null,
+        "executionTime":33582,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":null,
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17179767",
+            "id":17179767
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/698777302/links",
+            "issues":[]
+        }
+    },
+    {
+        "id":699026084,
+        "key":"PMA1-E188566",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381898,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381898"
+        },
+        "actualEndDate":"2024-01-26T16:06:15Z",
+        "estimatedTime":null,
+        "executionTime":0,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":" ",
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17185474",
+            "id":17185474
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/699026084/links",
+            "issues":[]
+        }
+    },
+    {
+        "id":702469568,
+        "key":"PMA1-E188585",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381898,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381898"
+        },
+        "actualEndDate":"2024-01-29T12:47:07Z",
+        "estimatedTime":null,
+        "executionTime":0,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":" ",
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17293329",
+            "id":17293329
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/702469568/links",
+            "issues":[]
+        }
+    },
+    {
+        "id":703481959,
+        "key":"PMA1-E188604",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381896,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381896"
+        },
+        "actualEndDate":"2024-01-30T12:00:30Z",
+        "estimatedTime":null,
+        "executionTime":32387,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":null,
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17316310",
+            "id":17316310
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/703481959/links",
+            "issues":[]
+        }
+    },
+    {
+        "id":703533875,
+        "key":"PMA1-E188623",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381896,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381896"
+        },
+        "actualEndDate":"2024-01-30T13:23:12Z",
+        "estimatedTime":null,
+        "executionTime":33330,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":null,
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17317722",
+            "id":17317722
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/703533875/links",
+            "issues":[]
+        }
+    },
+    {
+        "id":703777684,
+        "key":"PMA1-E188642",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381896,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381896"
+        },
+        "actualEndDate":"2024-01-30T18:54:08Z",
+        "estimatedTime":null,
+        "executionTime":34219,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":null,
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17323534",
+            "id":17323534
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/703777684/links",
+            "issues":[]
+        }
+    },
+    {
+        "id":703811604,
+        "key":"PMA1-E188662",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381896,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381896"
+        },
+        "actualEndDate":"2024-01-30T20:03:28Z",
+        "estimatedTime":null,
+        "executionTime":34739,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":null,
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17324677",
+            "id":17324677
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/703811604/links",
+            "issues":[]
+        }
+    },
+    {
+        "id":704507884,
+        "key":"PMA1-E188682",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381896,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381896"
+        },
+        "actualEndDate":"2024-01-31T13:58:52Z",
+        "estimatedTime":null,
+        "executionTime":33535,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":null,
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17339593",
+            "id":17339593
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/704507884/links",
+            "issues":[]
+        }
+    },
+    {
+        "id":705549572,
+        "key":"PMA1-E188702",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381896,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381896"
+        },
+        "actualEndDate":"2024-02-01T14:02:41Z",
+        "estimatedTime":null,
+        "executionTime":34179,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":null,
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17364871",
+            "id":17364871
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/705549572/links",
+            "issues":[]
+        }
+    },
+    {
+        "id":705587587,
+        "key":"PMA1-E188722",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381896,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381896"
+        },
+        "actualEndDate":"2024-02-01T14:54:27Z",
+        "estimatedTime":null,
+        "executionTime":38357,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":null,
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17365749",
+            "id":17365749
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/705587587/links",
+            "issues":[]
+        }
+    },
+    {
+        "id":706568941,
+        "key":"PMA1-E188742",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381896,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381896"
+        },
+        "actualEndDate":"2024-02-02T10:01:20Z",
+        "estimatedTime":null,
+        "executionTime":39470,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":null,
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17395392",
+            "id":17395392
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/706568941/links",
+            "issues":[]
+        }
+    },
+    {
+        "id":706713577,
+        "key":"PMA1-E188762",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381896,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381896"
+        },
+        "actualEndDate":"2024-02-02T13:18:20Z",
+        "estimatedTime":null,
+        "executionTime":33067,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":null,
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17398635",
+            "id":17398635
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/706713577/links",
+            "issues":[]
+        }
+    },
+    {
+        "id":706756516,
+        "key":"PMA1-E188782",
+        "project": {
+            "id":129674,
+            "self":"https://api.zephyrscale.smartbear.com/v2/projects/129674"
+        },
+        "testCase": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-T25/versions/1",
+            "id":28248468
+        },
+        "environment":null,
+        "jiraProjectVersion":null,
+        "testExecutionStatus": {
+            "id":2381896,
+            "self":"https://api.zephyrscale.smartbear.com/v2/statuses/2381896"
+        },
+        "actualEndDate":"2024-02-02T14:03:26Z",
+        "estimatedTime":null,
+        "executionTime":34844,
+        "executedById":"5dee5bf9dfde6b0e555b5be0",
+        "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+        "comment":null,
+        "automated":true,
+        "testCycle": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/17399567",
+            "id":17399567
+        },
+        "customFields": {
+            "Source of the problem":null,
+            "Action item":null
+        },
+        "links": {
+            "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/706756516/links",
+            "issues":[]
+        }
+    }]
+}
