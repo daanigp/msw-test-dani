@@ -15,31 +15,30 @@ module.exports = {
     },
 
     getPMA1TestCaseInfo: async (req, res) => {
-        
         //Crear un json con fker, y devolverlo.
         try {
             const url = req.params.nombre;
             const nombreFalso = faker.name.findName();
 
             const PMA1 = {
-                "id": Math.floor(Math.random() * (100000000 - 1) + 1),
+                "id": generarNumeroAleatorio(),
                 "key": "PMA1-"+url,
                 "name": nombreFalso,
                 "project": {
-                    "id": Math.floor(Math.random() * (100000 - 1) + 1),
+                    "id": generarNumeroAleatorio(),
                     "self": "https://api.zephyrscale.smartbear.com/v2/projects/129674"
                 },
-                "createdOn": "2022-08-10T09:20:23Z",
+                "createdOn": generarFechaAleatoria(),
                 "labels": [
                     "Smoke",
                     "e2e_ui",
                 ],
                 "status": {
-                    "id": Math.floor(Math.random() * (1000000 - 1) + 1),
+                    "id": generarNumeroAleatorio(),
                     "self": "https://api.zephyrscale.smartbear.com/v2/statuses/2381907"
                 },
                 "folder": {
-                    "id": Math.floor(Math.random() * (1000000 - 1) + 1),
+                    "id": generarNumeroAleatorio(),
                     "self": "https://api.zephyrscale.smartbear.com/v2/folders/3251612"
                 },
                 "owner": null,
@@ -57,7 +56,31 @@ module.exports = {
             return res.send("calling getPMA1TestCaseExecution") 
         } catch (err) {
             console.error(err);
-            return res.status(400).send(new Error("err"))
+            return res.status(400).send("Ha ocurrido un error al generar el nombre.")
         }
     }
+}
+
+function generarNumeroAleatorio() {
+    const numero = Math.floor(Math.random() * (100000000 - 1) + 1);
+
+    return numero;    
+}
+
+function generarFechaAleatoria() {
+    const fechaInicio = new Date(2022, 0, 1);
+    const fechaFin = new Date(2024, 3, 31);
+    
+    const tiempoAleatorio = fechaInicio.getTime() + Math.random() * (fechaFin.getTime() - fechaInicio.getTime());
+    
+    const fechaAleatoria = new Date(tiempoAleatorio);
+    
+    const horas = Math.floor(Math.random() * 24);
+    const minutos = Math.floor(Math.random() * 60);
+    const segundos = Math.floor(Math.random() * 60); 
+    const milisegundos = Math.floor(Math.random() * 1000);
+    
+    fechaAleatoria.setHours(horas, minutos, segundos, milisegundos);
+    
+    return fechaAleatoria;
 }
