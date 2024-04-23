@@ -56,7 +56,7 @@ module.exports = {
         try {
             const url = req.params.nombre;
             const resultadosMax = 30;
-            const resultadosTotal = 21;
+            const resultadosTotal = 20;
 
             const PMA1 = {
                 "next": null,
@@ -79,7 +79,7 @@ module.exports = {
         try {
             const url = req.params.nombre;
             const resultadosMax = 30;
-            const resultadosTotal = 21;
+            const resultadosTotal = 20;
 
             const statusPMA1 = {
                 "next": null,
@@ -109,12 +109,32 @@ function generarFechaAleatoria() {
     return fechaAleatoria;
 }
 
+function generarFechaAleatoria2(numDia) {
+    let fechaActual = new Date();
+    let fechas = [];
+    const cantidad = 1;
+
+    while (fechas.length < cantidad) {
+        if (fechaActual.getDay() == numDia) {
+            fechas.push(new Date(fechaActual));
+        }
+        fechaActual.setDate(fechaActual.getDate() + 1);
+    }
+
+    return fechas
+}
+
 function generarPMA1(url, numVeces) {
     const objetosPMA1 = [];
-    const fecha = generarFechaAleatoria();
-   
-    
     const idTestCase = faker.datatype.number({ min: 0, max: 100000 });
+    const fecha = [];
+
+    for (let x = 1; x <= 5; x++){
+        for (let y = 1; y <= 4; y++){
+            fecha.push(generarFechaAleatoria2(x));
+        }
+    }
+
 
     for (let i = 1; i <= numVeces; i++) {
         const idTestCycle = faker.datatype.number({ min: 0, max: 100000 });
@@ -137,7 +157,7 @@ function generarPMA1(url, numVeces) {
                 "id": idStatus, 
                 "self":"https://api.zephyrscale.smartbear.com/v2/statuses/" + idStatus
             },
-            "actualEndDate":fecha,
+            "actualEndDate":fecha[i],
             "estimatedTime":null,
             "executionTime":33582,
             "executedById":"5dee5bf9dfde6b0e555b5be0",
@@ -164,9 +184,69 @@ function generarPMA1(url, numVeces) {
     return objetosPMA1;
 }
 
+function generarPMA1_2(url) {
+    const objetosPMA1 = [];
+    const idTestCase = faker.datatype.number({ min: 0, max: 100000 });
+    const numDias = 5;
+    const numVeces = 4;
+    let id = 1;
+
+    for (let i = 1; i <= numDias; i++) {
+
+        const fecha = generarFechaAleatoria(i);
+
+        for (let x = 1; x <= numVeces; x++) {
+
+            const idTestCycle = faker.datatype.number({ min: 0, max: 100000 });
+            const idStatus = faker.datatype.number({ min: 0, max: 21 });
+
+            const pma = {
+                "id": id++,
+                "key":"PMA1-" + url + "-E" + faker.datatype.number({min: 0, max: 1000}),
+                "project": {
+                    "id": idProject,
+                    "self":"https://api.zephyrscale.smartbear.com/v2/projects/" + idProject
+                },
+                "testCase": {
+                    "self":"https://api.zephyrscale.smartbear.com/v2/testcases/PMA1-" + url +"/versions/1",
+                    "id": idTestCase
+                },
+                "environment":null,
+                "jiraProjectVersion":null,
+                "testExecutionStatus": {
+                    "id": idStatus, 
+                    "self":"https://api.zephyrscale.smartbear.com/v2/statuses/" + idStatus
+                },
+                "actualEndDate":fecha[x],
+                "estimatedTime":null,
+                "executionTime":33582,
+                "executedById":"5dee5bf9dfde6b0e555b5be0",
+                "assignedToId":"5dee5bf9dfde6b0e555b5be0",
+                "comment":null,
+                "automated":true,
+                "testCycle": {
+                    "self":"https://api.zephyrscale.smartbear.com/v2/testcycles/" + idTestCycle,
+                    "id": idTestCycle
+                },
+                "customFields": {
+                    "Source of the problem":null,
+                    "Action item":null
+                },
+                "links": {
+                    "self":"https://api.zephyrscale.smartbear.com/v2/testexecutions/698777302/links",
+                    "issues":[]
+                }
+            }
+
+            objetosPMA1.push(pma)
+        }
+    }
+
+    return objetosPMA1;
+}
+
 function generarPMA1status(url, numVeces) {
     const objetosPMA1status = []
-    
 
     for (let i = 1; i <= numVeces; i++) {
 
