@@ -142,7 +142,8 @@ function generarPMA1(url, numVeces) {
 
         const pma = {
             "id": i,
-            "key":"PMA1-" + url + "-E" + faker.datatype.number({min: 0, max: 1000}),
+            "key": "PMA1-" + url + "-E" + faker.datatype.number({ min: 0, max: 1000 }),
+            "tag": generateTag(),
             "project": {
                 "id": idProject,
                 "self":"https://api.zephyrscale.smartbear.com/v2/projects/" + idProject
@@ -271,6 +272,21 @@ function generarPMA1status(url, numVeces) {
     }
 
     return objetosPMA1status;
+}
+
+function generateTag() {
+    const num = faker.datatype.number({min: 1, max: 4})
+
+    switch (num) {
+        case 1:
+            return "smoke"
+        case 2:
+            return "regression"
+        case 3:
+            return "feat_a"
+        case 4:
+            return "feat_b"
+    }
 }
 
 function generarNombreObjetoStatus() {
