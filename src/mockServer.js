@@ -1,19 +1,7 @@
-const axios = require('axios').default
 const faker = require('faker')
 const idProject = faker.datatype.number({min: 0, max: 10000})
 
 module.exports = {
-    getTodos: async (req, res) => {
-        try {
-            const response = await axios.get('https://jsonplaceholder.typicode.com/todos')
-            console.log(req.baseUrl)
-            return res.json(response.data)
-        } catch (err) {
-            console.error(err);
-            return res.status(400).send(new Error(err))
-        }
-    },
-
     getPMA1TestCaseInfo: async (req, res) => {
         //Crear un json con fker, y devolverlo.
         try {
