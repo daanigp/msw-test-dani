@@ -75,7 +75,7 @@ module.exports = {
                 "maxResults": resultadosMax,
                 "total": resultadosTotal,
                 "isLast": faker.datatype.boolean(),
-                "values": generarPMA1status(url, resultadosTotal)
+                "values": generarPMA1status(resultadosTotal)
             }
 
             return res.json(statusPMA1)
@@ -127,15 +127,17 @@ function generarPMA1(url, numVeces) {
 
     for (let i = 1; i <= numVeces; i++) {
         const idTestCycle = faker.datatype.number({ min: 0, max: 100000 });
+        const nombreFalso = faker.name.findName();
+
         do {
             idStatus = faker.datatype.number({ min: 1, max: 20 });
         } while (idNums.includes(idStatus))
-
         idNums.push(idStatus)
 
         const pma = {
             "id": i,
             "key": "PMA1-" + url + "-E" + faker.datatype.number({ min: 0, max: 1000 }),
+            "name": nombreFalso,
             "tag": generateTag(),
             "project": {
                 "id": idProject,
@@ -178,7 +180,7 @@ function generarPMA1(url, numVeces) {
     return objetosPMA1;
 }
 
-function generarPMA1status(url, numVeces) {
+function generarPMA1status(numVeces) {
     const objetosPMA1status = []
 
     for (let i = 1; i <= numVeces; i++) {
@@ -216,7 +218,7 @@ function generateTag() {
             return "regression"
         case 3:
             return "feat_a"
-        case 4:
+        default:
             return "feat_b"
     }
 }
@@ -229,7 +231,7 @@ function generateEnvironment() {
             return "prod"
         case 2:
             return "dev"
-        case 3:
+        default:
             return "stg"
     }
 }
@@ -244,7 +246,7 @@ function generarNombreObjetoStatus() {
             return "Pass"
         case 3:
             return "Fail"
-        case 4:
+        default:
             return "Blocked"
     }
 }
@@ -257,7 +259,7 @@ function generarColorStatus(nombre) {
             return "#3abb4b"
         case "Fail":
             return "#df2f36"
-        case "Blocked":
+        default:
             return "#4b88e7"
     }
 }
@@ -270,7 +272,7 @@ function paramArchived(nombre) {
             return false
         case "Fail":
             return false
-        case "Blocked":
+        default:
             return false
     }
 }
@@ -283,7 +285,7 @@ function paramDefault(nombre) {
             return false
         case "Fail":
             return false
-        case "Blocked":
+        default:
             return false
     }
 }
