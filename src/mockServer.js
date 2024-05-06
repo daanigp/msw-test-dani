@@ -128,7 +128,7 @@ function generarPMA1(url, numVeces) {
     for (let i = 1; i <= numVeces; i++) {
         const idTestCycle = faker.datatype.number({ min: 0, max: 100000 });
         do {
-            idStatus = faker.datatype.number({ min: 0, max: 21 });
+            idStatus = faker.datatype.number({ min: 1, max: 20 });
         } while (idNums.includes(idStatus))
 
         idNums.push(idStatus)
