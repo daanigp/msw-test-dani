@@ -116,6 +116,8 @@ function generarPMA1(url, numVeces) {
     const objetosPMA1 = [];
     const idTestCase = faker.datatype.number({ min: 0, max: 100000 });
     const fecha = [];
+    let idNums = [];
+    let idStatus;
 
     for (let x = 1; x <= 5; x++){
         for (let y = 1; y <= 4; y++){
@@ -125,7 +127,11 @@ function generarPMA1(url, numVeces) {
 
     for (let i = 1; i <= numVeces; i++) {
         const idTestCycle = faker.datatype.number({ min: 0, max: 100000 });
-        const idStatus = faker.datatype.number({ min: 0, max: 21 });
+        do {
+            idStatus = faker.datatype.number({ min: 0, max: 21 });
+        } while (idNums.includes(idStatus))
+
+        idNums.push(idStatus)
 
         const pma = {
             "id": i,
